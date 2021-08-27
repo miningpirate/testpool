@@ -1,0 +1,86 @@
+<div class="jumbotron-brand">
+<div class="row"><br><br><br>
+<div class="<container">
+    <div class="col-md-12">
+<div class="note note-info">
+         <h3>Getting Started with {{config.PoolName}} mining</h3>
+        <h3>lolMiner</h3>
+      <p>In order to mine etchash you need   
+        <a href="https://github.com/Lolliedieb/lolMiner-releases/releases" rel="nofollow" target="_blank">lolMiner</a> v1.12+
+      </p>
+      <p><code>./lolMiner --pool {{config.StratumHost}}:{{config.StratumPort}} --user [YOUR_ETC_ADDRESS] -c ETC --ethstratum=ETHPROXY</code></p>
+      <dl class="dl-horizontal">
+        <dt>YOUR ETC ADDRESS</dt>
+        <dd>This is your address for payouts, generate one with core-geth, or mine directly to an exchange like
+          <a href="http://bittrex.com" rel="nofollow" target="_blank">Bittrex</a>.<br>
+          Example: 0xda904bc07fd95e39661941b3f6daded1b8a38c71.<br>
+        
+        <strong>Full Example:</strong><br>
+        ./lolMiner --pool {{config.StratumHost}}:{{config.StratumPort}} --user 0xda904bc07fd95e39661941b3f6daded1b8a38c71 -c ETC --ethstratum=ETHPROXY.<br>
+        </dd>
+      </dl>
+    </div>
+   </div>
+   </div>
+       <div class="col-md-12">
+<div class="note note-info">
+        <h3>nanominer <small>mainnet only</small> </h3><br><br>
+      <p>In order to mine etchash you need   
+        <a href="https://github.com/nanopool/nanominer/releases" rel="nofollow" target="_blank">nanominer</a> v1.12.0+
+      </p>
+      <h4>example config</h4>
+      <dl class="dl-horizontal">
+<dt>YOUR ETC ADDRESS</dt>
+        <dd>This is your address for payouts, generate one with core-geth, or mine directly to an exchange like
+          <a href="http://bittrex.com" rel="nofollow" target="_blank">Bittrex</a>.<br/>
+          <strong>Example:</strong> 0xda904bc07fd95e39661941b3f6daded1b8a38c71.
+        </dd>
+       </dl>
+        <strong>Full Example:</strong>
+        <li>Address to send funds to. Change this address to yours!</li>
+        <li>wallet = 0xe31e000e4C87a95AB488445768fF9490953C6EFF</li>
+        <li>Coin to mine -- coin = ETC</li>
+        <li>(Optional) Rig (worker) name.</li>
+        <li>rigName = (Your're Rig Name)</li>
+        <li>pool1 = {{config.StratumHost}}:{{config.StratumPort}}</li>
+    </div>
+    </div>
+ 
+<div class="col-md-12">
+<div class="note note-info">
+<div class="page-header">
+ <h3><a href="https://phoenixminer.org" rel="nofollow" target="_blank"> Phoenixminer 5.3b </a></h3>
+ <h4>example config</h4>
+<p><code>Windows -Phoenixminer.exe -pool {{config.StratumHost}}:{{config.StratumPort}} -wal [YOUR_ETC_ADDRESS] -coin ETC -worker "worker name" -pass x</code></p>
+<p><code>Linux - ./phoenixminer -pool {{config.StratumHost}}:{{config.StratumPort}} -wal [YOUR_ETC_ADDRESS] -coin ETC -worker "worker name" -pass x</code></p>
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="note note-info">
+<div class="page-header">
+ <h3><a href="https://github.com/todxx/teamredminer/releases/tag/0.7.18" rel="nofollow" target="_blank"> Team Red Miner</a></h3>
+ <h4>example config</h4>
+ <p><code>Windows - Teamredminer.exe -a etchash -o {{config.StratumHost}}:{{config.StratumPort}} -u [YOUR_ETC_ADDRESS] --eth_worker "your worker"</code></p>
+ <p><code>Linux - ./teamredminer -a etchash -0 {{config.StratumHost}}:{{config.StratumPort}} -u [YOUR_ETC_ADDRESS] --eth_worker "your worker"</code></p>
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="note note-info">
+<div class="page-header">
+<h3> Mining Software and Useful Links</h3>
+<a class="btn btn-dark btn" href="https://bitcointalk.org/index.php?topic=2647654.0">Phoenix Miner</a>
+<a class="btn btn-dark btn"href="https://github.com/Lolliedieb/lolMiner-releases/releases">LOL Miner</a>
+<a class="btn btn-dark btn" href="https://github.com/nanopool/nanominer/releases">Nano Miner</a>
+<a class="btn btn-dark btn" href="https://github.com/develsoftware/GMinerRelease/releases">G-Miner</a>
+<a class="btn btn-dark btn" href="https://github.com/trexminer/T-Rex/releases">T-REX Miner</a>
+<a class="btn btn-dark btn" href="https://github.com/NebuTech/NBMiner/releases">NB-Miner</a>
+<a class="btn btn-dark btn" href="https://github.com/doktor83/SRBMiner-Multi/releases">SRB-Miner-Multi</a>
+<a class="btn btn-dark btn" href="https://github.com/etclabscore/core-geth">Core-Geth</a>
+<a class="btn btn-dark btn" href="https://siasky.net/AABJWGPIP6B23jHykmoTfw0P9jk4yrKD1lPUTlJXgbJpQQ">ETCHASH V5 Bitstream</a>
+</div>
+</div>
+</div>
+</div>
+</div>

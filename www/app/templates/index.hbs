@@ -1,0 +1,88 @@
+<div class="jumbotron-brand">
+  <div class="container"><br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="alert alert-info text-center join_telegram">
+          Join our <a class="alert-link" href="https://discord.gg/XACzfZQtTU">Discord</a> for support!
+        </div>
+      </div>
+    </div>
+    <div class="row"><br>
+      <div class="col-md-4">
+      <div class="note note-info">
+       <span class="label label-success">Payout</span> Min. payout <span style="color:#000000"><b>{{config.PayoutThreshold}}</b></span> <br>Payouts run every 3 Hours.<br>
+        <span class="label label-success">Reward</span> PPLNS system (N=30000 shares)<br>
+        <span class="label label-success">ETC.RAVENMINE.CO</span> Professional, Stable & Profitable<br>
+       <i class="fab fa-wpexplorer" aria-hidden="true"></i> Block Explorer: <a href="https://blockscout.com/etc/mainnet" target="_blank">View</a><br>
+       <i class="fa fa-users"></i><span style="color:purple"> Miners Online: <span id="poolHashrate">{{format-number stats.model.minersTotal}}</span></span><br>
+       <i class="fa fa-money"></i> Pool Fee: <span id="poolFee" class="label label-success">{{config.PoolFee}}</span><br>
+        {{#if stats.model.stats.lastBlockFound}}
+       <i class="fa fa-clock-o"></i><b><span style="color:orangered"> Last Block Found: {{format-relative (seconds-to-ms stats.model.stats.lastBlockFound)}}</span></b>
+       {{/if}}	
+	<div><i class="fa fa-tachometer"></i><span style="color:darkgreen"> Pool Hashrate: <span id="poolHashrate">: {{format-hashrate stats.model.hashrate}}</span></span></div>
+          <div><i class="fa fa-unlock-alt"></i><span style="color:red"> Network Difficulty: {{with-metric-prefix stats.difficulty}}</span></div>
+          <div><i class="fa fa-tachometer"></i><span style="color:navy"> Network Hashrate: {{format-hashrate stats.hashrate}}</span></div>
+          <div><i class="fa fa-bars"></i><span style="color:brown"> Blockchain Height: {{format-number stats.height}}</span></div>
+          <div><i class="fa fa-clock-o"></i><span style="color:darkgreen"> Current Round Variance: {{format-number stats.roundVariance style='percent'}}</span></div>
+          <div class="progress">
+          <div class="progress-bar bg-success" style="width:{{format-number stats.roundVariance style='percent'}}"></div> 
+		</div>
+             </div>     
+        </div> 
+   <div class="col-md-4">
+	<div class="note note-info">
+	<center><img src="./ETHermine.gif"></center>
+	</div>
+	</div>
+    	
+<div class="col-md-4">
+<div class="note note-info">
+<iframe style="width: 100%; height: 280px" frameBorder="0" scrolling="no" src="https://coinmarketchart.com/widget?symbol=ETC&currency=USD"><br></iframe>
+</div>
+  </div>
+</div>
+</div>
+<div class="container">
+<p class="text-muted text-center">
+          <div style="font-family: Verdana, Tahoma, Arial, sans-serif;font-size: 10px;color: #C9C6BD;text-align: center;padding:4px 4px 4px 4px;margin: 0;margin-left: auto;margin-right: auto;width: 90%;border: 1px solid #eee!important;"><iframe src="https://widget.coinlib.io/widget?type=horizontal&theme=light&pref_coin_id=1505&invert_hover=no" width="100%" height="22" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div>
+        </p>
+  <div class="stats">
+    <h4 style="color:white;">Your Stats &amp; Payment History</h4>
+    <div class="input-group">
+      {{input value=cachedLogin class="form-control" placeholder="Enter Your Ethereum Classic Address"}}
+      <span class="input-group-btn">
+        <button class="btn btn-primary btn-etc" type="button" {{action 'lookup' cachedLogin}}>
+          <span style="display: inline;"><i class="fa fa-search"></i> Lookup</span>
+      </button>
+      </span>
+    </div>
+  </div>
+<h4 class="note note-info text-center">
+	<h3> Welcome to our new ETC mining Pool.</h3>
+</h4>
+  <div>
+    {{#if (equals config.Network 'mordor')}}
+      <div class="bs-callout bs-callout-danger">
+        <h4>
+          Warning
+        </h4>
+        <p>This is an experimental pool running on the <strong>Mordor</strong> testnet! All mined coins are for testing purposes only.</p>
+      </div>
+    {{/if}}
+        <h4 class="note note-info text-center">
+	<h3> INSTRUCTIONS </h3><br>
+	<a href="https://www.miningrigrentals.com/rigs/etchash" target="_blank"><img src="./homelogo.png" border="0"></a><br>
+	<i class="fa fa-server"></i> Algorithm: ETCHASH<br><br>
+	<i class="fa fa-server"></i> Server: etc.ravenmine.co<br><br>
+	<i class="fab fa-megaport"></i>  2G Port: 8002<br>
+	<i class="fab fa-megaport"></i>  4G Port: 8004<br>
+	<i class="fab fa-megaport"></i>  9G Port: 8009<br>
+	<i class="fa fa-user-astronaut"></i> Username: Wallet ID<br>
+	<i class="fa fa-key"></i> Password: x<br>
+	</h4>
+          </div>
+        </div>
+      </div>
+    
+
+
